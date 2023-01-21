@@ -36,7 +36,7 @@ gdp %>%
 gdp %>% 
   ggplot(aes(aiding,GDP_TRN_USD,fill=Country)) + 
            geom_col(color = "black") +
-  scale_fill_viridis_d()  +
+  scale_fill_manual(values = rep(brewer.pal(6,"Dark2"),8))  +
   annotate("text",x = 4,y=5,label = "Iran,\nN.Korea,\nBelarus") +
   labs(title = "Who Wins A War of Attrition?",
        subtitle = "GDP of Belligerents and their Helpers in the Russo-Ukraine War",
@@ -50,7 +50,8 @@ gdp %>%
 gdp %>% 
   ggplot(aes(Помощь,GDP_TRN_USD,fill=страна)) + 
   geom_col(color = "black") +
-  scale_fill_viridis_d()  +
+  scale_fill_manual(values = rep(brewer.pal(6,"Dark2"),8))  +
+  annotate("text",x = 4,y=5,label = "Иран,\nЮжная Корея,\nБеларусь") +
   labs(title = "Кто выиграет войну на истощение?",
        subtitle = "ВВП воюющих сторон и их пособников в русско-украинской войне",
        y = "ВВП в 2020 г. (триллион долларов США)",
